@@ -1,19 +1,27 @@
 
 class Rational(x: Int,y: Int) {
+  def this(x: Int) = this(x,1)
+  require(y !=0 ,"denominator must be zero")
   private def gcd(a: Int ,b: Int): Int = if(b == 0) a else gcd(b,a%b)
-  private val g = gcd(x,y)
-  def numer = x /g
-  def denom = y /g
 
-  def add(that: Rational) =
+  def numer = x
+  def denom = y
+
+  def + (that: Rational) =
     new Rational(
       numer * that.denom + that.numer * denom, denom * that.denom)
-  override def toString = numer +"/" + denom
+
+  override def toString = {
+  val g = gcd(x, y)
+    numer / g + "/" + denom / g
+  }
   def neg(that: Rational) = new Rational(-numer,denom)
 
-  def sub(that:Rational) = add(that.neg(that))
-  def less(that: Rational): Boolean = numer * that.denom < that.numer * denom
-  def max (that: Rational) = if(this.less(that)) that else this
+  def - (that: Rational) = this + that.neg(that)
+
+  def sub(that:Rational) =this + that.neg(that)
+  def < (that: Rational): Boolean = numer * that.denom < that.numer * denom
+  def max (that: Rational) = if(this.<(that)) that else this
 }
 
   val x = new Rational(1, 3)
@@ -21,9 +29,13 @@ class Rational(x: Int,y: Int) {
   val z = new Rational(3, 2)
 
 
-x.sub(y).sub(z)
+val e = x.sub(y).sub(z)
+
 y.toString
 z.toString
-y.add(y)
-x.less(y)
+y + (y)
+x<(y)
 x.max(y)
+new Rational(2)
+
+x < y

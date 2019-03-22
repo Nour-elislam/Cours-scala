@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0b27062-2e4e-49e4-ab6b-aa084cd1d08d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/week04/List.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/week04/nth.sc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/week03/rationnals.sc" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/week03/rationnals.sc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../funsets/.idea/modules/funsets_7554.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../funsets/.idea/modules/funsets_7554.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../funsets/.idea/modules/progfun1-funsets.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../funsets/.idea/modules/progfun1-funsets.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../funsets/.idea/sbt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../funsets/.idea/sbt.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b0b27062-2e4e-49e4-ab6b-aa084cd1d08d" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -103,8 +94,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/week04/nth.sc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+            <state relative-caret-position="45">
+              <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -344,7 +335,8 @@
     <MESSAGE value="week 02 Excercice3 about Curring" />
     <MESSAGE value="week 02 Excercice4" />
     <MESSAGE value="rational" />
-    <option name="LAST_COMMIT_MESSAGE" value="rational" />
+    <MESSAGE value="List week04" />
+    <option name="LAST_COMMIT_MESSAGE" value="List week04" />
   </component>
   <component name="WorksheetDefaultProjectSettings">
     <option name="compilerProfileName" value="Default" />
@@ -432,8 +424,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/week04/nth.sc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        <state relative-caret-position="45">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
         </state>
       </provider>
     </entry>

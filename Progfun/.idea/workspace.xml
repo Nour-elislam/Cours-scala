@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0b27062-2e4e-49e4-ab6b-aa084cd1d08d" name="Default Changelist" comment="" />
+    <list default="true" id="b0b27062-2e4e-49e4-ab6b-aa084cd1d08d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/week04/List.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/week04/nth.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/week03/rationnals.sc" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/week03/rationnals.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../funsets/.idea/modules/funsets_7554.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../funsets/.idea/modules/funsets_7554.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../funsets/.idea/modules/progfun1-funsets.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../funsets/.idea/modules/progfun1-funsets.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../funsets/.idea/sbt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../funsets/.idea/sbt.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -50,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/scala/week02/excercie2.sc">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -59,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/scala/week02/Excercice3.sc">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -68,16 +77,34 @@
         <entry file="file://$PROJECT_DIR$/src/main/scala/week02/Excercice4.sc">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/week03/rationnals.sc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/week04/List.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/week03/rationnals.sc">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/week04/nth.sc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+            <state relative-caret-position="180">
+              <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -92,6 +119,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Package Object" />
         <option value="Scala Worksheet" />
       </list>
     </option>
@@ -123,6 +151,9 @@
         <option value="$PROJECT_DIR$/src/main/scala/week02/Excercice3.sc" />
         <option value="$PROJECT_DIR$/src/main/scala/week02/Excercice4.sc" />
         <option value="$PROJECT_DIR$/src/main/scala/week03/rationnals.sc" />
+        <option value="$PROJECT_DIR$/src/main/scala/week03/intsets.sc" />
+        <option value="$PROJECT_DIR$/src/main/scala/week04/List.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/week04/nth.sc" />
       </list>
     </option>
   </component>
@@ -168,21 +199,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="week02" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Progfun" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Progfun" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="week03" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Progfun" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Progfun" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="week04" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Progfun" type="b2602c69:ProjectViewProjectNode" />
@@ -207,6 +224,11 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="scala" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -264,7 +286,7 @@
     <option name="modificationStamps">
       <map>
         <entry key="$PROJECT_DIR$" value="3105736008000" />
-        <entry key="$PROJECT_DIR$/build.sbt" value="2519579196" />
+        <entry key="$PROJECT_DIR$/build.sbt" value="2224559570" />
         <entry key="$PROJECT_DIR$/project/build.properties" value="2567920773" />
       </map>
     </option>
@@ -281,7 +303,7 @@
       </map>
     </option>
   </component>
-  <component name="TodoView" selected-index="3">
+  <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -292,9 +314,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15450644" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49872774" visible="true" weight="0.15665236" />
+      <window_info id="Structure" order="1" sideWeight="0.50127226" side_tool="true" weight="0.15665236" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -303,12 +326,12 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4985694" weight="0.32951653" />
-      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" sideWeight="0.49785408" weight="0.32951653" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" sideWeight="0.4985694" visible="true" weight="0.32951653" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50143063" side_tool="true" visible="true" weight="0.32951653" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49713877" weight="0.32951653" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" sideWeight="0.49713877" weight="0.32951653" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49785408" weight="0.32951653" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.51573676" side_tool="true" visible="true" weight="0.32951653" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.32951653" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.48712447" weight="0.32951653" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.48426324" visible="true" weight="0.32951653" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -342,30 +365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/.history">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/week02/excercie2.sc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/week02/Excercice3.sc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/week02/Excercice4.sc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/week02/exercice.sc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -373,10 +372,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/week02/excercie2.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/week02/Excercice3.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/week02/Excercice4.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/.history">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/week04/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/week03/intsets.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/week04/Listy.scala">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/week03/rationnals.sc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+        <state relative-caret-position="241">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/week04/inth.sc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/week04/List.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/week04/nth.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>

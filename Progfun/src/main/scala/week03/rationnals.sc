@@ -15,9 +15,9 @@ class Rational(x: Int,y: Int) {
   val g = gcd(x, y)
     numer / g + "/" + denom / g
   }
-  def neg(that: Rational) = new Rational(-numer,denom)
+  def neg(that: Rational) = new Rational(-(this.numer),denom)
 
-  def - (that: Rational) = this + that.neg(that)
+  //def - (that: Rational) = this + that.neg(that)
 
   def sub(that:Rational) =this + that.neg(that)
   def < (that: Rational): Boolean = numer * that.denom < that.numer * denom
@@ -36,6 +36,10 @@ z.toString
 y + (y)
 x<(y)
 x.max(y)
-new Rational(2)
+def l = new Rational(2,4)
+def total = x.sub(x)
 
-x < y
+l.toString
+x.toString
+total.toString
+

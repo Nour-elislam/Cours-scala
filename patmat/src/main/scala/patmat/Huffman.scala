@@ -24,10 +24,17 @@ object Huffman {
   
 
   // Part 1: Basics
-    def weight(tree: CodeTree): Int = ??? // tree match ...
+    def weight(tree: CodeTree): Int = tree match {
+      case Fork(_,_,_,weight) => weight
+      case Leaf(_,weight) => weight
+    }
   
-    def chars(tree: CodeTree): List[Char] = ??? // tree match ...
-  
+    def chars(tree: CodeTree): List[Char] = tree match
+      {
+      case Fork(_,_,chars,_) => chars
+      case Leaf(char,_) => char :: Nil
+      }
+
   def makeCodeTree(left: CodeTree, right: CodeTree) =
     Fork(left, right, chars(left) ::: chars(right), weight(left) + weight(right))
 
@@ -69,8 +76,18 @@ object Huffman {
    *       println("integer is  : "+ theInt)
    *   }
    */
-    def times(chars: List[Char]): List[(Char, Int)] = ???
-  
+def found(char: Char , l : List[(Char, Int)]): List[(Char, Int)] = l match{
+  case List() => (char,1)::Nil
+  case head:: tail => if(head._1 == char) (char,head._2+1) :: tail
+    else (head._1,head._2) :: found(char,tail)
+  }
+
+  def times(chars: List[Char]): List[(Char, Int)] = chars match {
+    case List() =>  Nil
+    case head :: tail => found(head,times(tail))
+    }
+
+
   /**
    * Returns a list of `Leaf` nodes for a given frequency table `freqs`.
    *
@@ -78,8 +95,18 @@ object Huffman {
    * head of the list should have the smallest weight), where the weight
    * of a leaf is the frequency of the character.
    */
-    def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] = ???
-  
+
+  def sortList(freq: List[(Char,Int)]):List[(Char,Int)] = freq match
+  {
+    case List() => Nil
+    case head :: tail => head::sortList(tail)
+  }
+
+    def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] = freqs match{
+      case List() => Nil
+      case head::tail => Leaf(head._1,head._2) :: makeOrderedLeafList(tail)
+    }
+
   /**
    * Checks whether the list `trees` contains only one single code tree.
    */
@@ -146,8 +173,8 @@ object Huffman {
 
   /**
    * What does the secret message say? Can you decode it?
-   * For the decoding use the `frenchCode' Huffman tree defined above.
-   */
+   * For the decoding use the `frenchCode' Huffman tree defined above.*/
+
   val secret: List[Bit] = List(0,0,1,1,1,0,1,0,1,1,1,0,0,1,1,0,1,0,0,1,1,0,1,0,1,1,0,0,1,1,1,1,1,0,1,0,1,1,0,0,0,0,1,0,1,1,1,0,0,1,0,0,1,0,0,0,1,0,0,0,1,0,1)
 
   /**

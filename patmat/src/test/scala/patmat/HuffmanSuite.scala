@@ -12,7 +12,8 @@ class HuffmanSuite extends FunSuite {
 	trait TestTrees {
 		val t1 = Fork(Leaf('a',2), Leaf('b',3), List('a','b'), 5)
 		val t2 = Fork(Fork(Leaf('a',2), Leaf('b',3), List('a','b'), 5), Leaf('d',4), List('a','b','d'), 9)
-	}
+	  val t3 = List('a', 'b', 'a')
+  }
 
 
   test("weight of a larger tree") {
@@ -27,7 +28,11 @@ class HuffmanSuite extends FunSuite {
       assert(chars(t2) === List('a','b','d'))
     }
   }
-
+  test("times occur") {
+    new TestTrees {
+      assert(times(t3) === List(('a', 2),('b', 1)))
+    }
+  }
 
   test("string2chars(\"hello, world\")") {
     assert(string2Chars("hello, world") === List('h', 'e', 'l', 'l', 'o', ',', ' ', 'w', 'o', 'r', 'l', 'd'))

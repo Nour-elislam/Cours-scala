@@ -110,7 +110,21 @@ def found(char: Char , l : List[(Char, Int)]): List[(Char, Int)] = l match{
   /**
    * Checks whether the list `trees` contains only one single code tree.
    */
-    def singleton(trees: List[CodeTree]): Boolean = ???
+    def singleton(trees: List[CodeTree]): Boolean = trees match {
+      case List() => true
+      case y :: ys => y match {
+        case Leaf(_,_) => singleton(ys)
+        case Fork(left,right,_,_) => if(left == Nil && (right == Nil)) singleton(ys) else false
+      }
+    }
+
+  def singleton2(trees: List[CodeTree]): Boolean = trees match {
+    case List() => false
+    case y :: ys => y match {
+      case Leaf(char,weight) =>  true
+      case Fork(left,right,_,_) => singleton2(List(left,right))
+    }
+  }
   
   /**
    * The parameter `trees` of this function is a list of code trees ordered
@@ -124,8 +138,13 @@ def found(char: Char , l : List[(Char, Int)]): List[(Char, Int)] = l match{
    * If `trees` is a list of less than two elements, that list should be returned
    * unchanged.
    */
-    def combine(trees: List[CodeTree]): List[CodeTree] = ???
-  
+    def combine(trees: List[CodeTree]): List[CodeTree] = trees match {
+      case List() => throw new Error("Nil list")
+      //case _ => trees
+      case x ::xs :: xsz  =>  (makeCodeTree(x,xs) :: xsz).sortWith((h1,h12) => weight(h1) < weight(h12))
+
+
+    }
   /**
    * This function will be called in the following way:
    *
@@ -143,7 +162,7 @@ def found(char: Char , l : List[(Char, Int)]): List[(Char, Int)] = l match{
    *    the example invocation. Also define the return type of the `until` function.
    *  - try to find sensible parameter names for `xxx`, `yyy` and `zzz`.
    */
-    def until(xxx: ???, yyy: ???)(zzz: ???): ??? = ???
+    def until(xxx:  Boolean, yyy: ???)(zzz: List[CodeTree]): List[CodeTree] = 
   
   /**
    * This function creates a code tree which is optimal to encode the text `chars`.

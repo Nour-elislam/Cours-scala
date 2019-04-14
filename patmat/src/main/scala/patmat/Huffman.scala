@@ -110,14 +110,18 @@ def found(char: Char , l : List[(Char, Int)]): List[(Char, Int)] = l match{
   /**
    * Checks whether the list `trees` contains only one single code tree.
    */
-    def singleton(trees: List[CodeTree]): Boolean = trees match {
+  def singleton(trees: List[CodeTree]): Boolean = trees match {
+    case _ :: Nil =>true
+    case _ => false
+  }
+   /* def singleton3(trees: List[CodeTree]): Boolean = trees match {
       case List() => true
       case y :: ys => y match {
         case Leaf(_,_) => singleton(ys)
         case Fork(left,right,_,_) => if(left == Nil && (right == Nil)) singleton(ys) else false
       }
     }
-
+*/
   def singleton2(trees: List[CodeTree]): Boolean = trees match {
     case List() => false
     case y :: ys => y match {
@@ -162,7 +166,10 @@ def found(char: Char , l : List[(Char, Int)]): List[(Char, Int)] = l match{
    *    the example invocation. Also define the return type of the `until` function.
    *  - try to find sensible parameter names for `xxx`, `yyy` and `zzz`.
    */
-    def until(xxx:  Boolean, yyy: ???)(zzz: List[CodeTree]): List[CodeTree] = 
+    def until(p: List[CodeTree] => Boolean, c: List[CodeTree] => List[CodeTree])(trees: List[CodeTree]): List[CodeTree] ={
+      if (p(trees)) trees
+      else until(p,c)(c(trees))
+    }
   
   /**
    * This function creates a code tree which is optimal to encode the text `chars`.
@@ -170,7 +177,7 @@ def found(char: Char , l : List[(Char, Int)]): List[(Char, Int)] = l match{
    * The parameter `chars` is an arbitrary text. This function extracts the character
    * frequencies from that text and creates a code tree based on them.
    */
-    def createCodeTree(chars: List[Char]): CodeTree = ???
+    def createCodeTree(chars: List[Char]): CodeTree = until(singleton,combine)(makeOrderedLeafList(times(chars))).head
   
 
   // Part 3: Decoding
@@ -181,7 +188,16 @@ def found(char: Char , l : List[(Char, Int)]): List[(Char, Int)] = l match{
    * This function decodes the bit sequence `bits` using the code tree `tree` and returns
    * the resulting list of characters.
    */
-    def decode(tree: CodeTree, bits: List[Bit]): List[Char] = ???
+    def decode(tree: CodeTree, bits: List[Bit]): List[Char] = {
+      def decodeHelper(bits: List[Bit],tree2: CodeTree,acc: List[Char]):List[Char]= tree2 match{
+        case Fork(left,right,_,_) => decodeHelper(bits.tail,if(bits.head == 1) right else left,acc)
+        case Leaf(char,_) => bits match {
+          case Nil => acc :+char
+          case _ => decodeHelper(bits,tree,acc :+ char)
+        }
+      }
+    decodeHelper(bits,tree,Nil)
+    }
   
   /**
    * A Huffman coding tree for the French language.
@@ -199,7 +215,7 @@ def found(char: Char , l : List[(Char, Int)]): List[(Char, Int)] = l match{
   /**
    * Write a function that returns the decoded secret
    */
-    def decodedSecret: List[Char] = ???
+    def decodedSecret: List[Char] = decode(frenchCode,secret)
   
 
   // Part 4a: Encoding using Huffman tree
@@ -208,8 +224,21 @@ def found(char: Char , l : List[(Char, Int)]): List[(Char, Int)] = l match{
    * This function encodes `text` using the code tree `tree`
    * into a sequence of bits.
    */
-    def encode(tree: CodeTree)(text: List[Char]): List[Bit] = ???
-  
+    def encode(tree: CodeTree)(text: List[Char]): List[Bit] = {
+      def encodeHelper(tree2: CodeTree, text2: List[Char], acc: List[Bit]): List[Bit] = text2 match {
+        case x :: xs => tree2 match {
+          case Leaf(_, _) => encodeHelper(tree, xs, acc)
+          case Fork(left, right, _, _) => if (chars(right).contains(x)) {
+            encodeHelper(right, text2, 1 :: acc)
+          } else {
+        encodeHelper (left, text2, 0 :: acc)
+        }
+        }
+        case Nil => acc
+      }
+
+      encodeHelper(tree, text, Nil).reverse
+    }
   // Part 4b: Encoding using code table
 
   type CodeTable = List[(Char, List[Bit])]

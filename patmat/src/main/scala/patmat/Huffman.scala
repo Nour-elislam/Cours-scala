@@ -96,15 +96,15 @@ def found(char: Char , l : List[(Char, Int)]): List[(Char, Int)] = l match{
    * of a leaf is the frequency of the character.
    */
 
-  def sortList(freq: List[(Char,Int)]):List[(Char,Int)] = freq match
+  def makeOrderHelper(freqs:(Char, Int),freqs2: List[Leaf]):List[Leaf] = freqs2 match
   {
-    case List() => Nil
-    case head :: tail => head::sortList(tail)
+    case List() => List(Leaf(freqs._1,freqs._2))
+    case head :: tail => if(freqs._2 <= head.weight) Leaf(freqs._1,freqs._2) :: freqs2 else head::makeOrderHelper(freqs,tail)
   }
 
     def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] = freqs match{
-      case List() => Nil
-      case head::tail => Leaf(head._1,head._2) :: makeOrderedLeafList(tail)
+      case List() => List()
+      case head::tail => makeOrderHelper(head,makeOrderedLeafList(tail))
     }
 
   /**

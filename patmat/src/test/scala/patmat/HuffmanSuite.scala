@@ -43,6 +43,10 @@ class HuffmanSuite extends FunSuite {
     assert(makeOrderedLeafList(List(('t', 2), ('e', 1), ('x', 3))) === List(Leaf('e',1), Leaf('t',2), Leaf('x',3)))
   }
 
+  test("makeOrderedLeafList for long List frequency table") {
+    assert(makeOrderedLeafList(List(('t', 2), ('e', 1), ('x', 3),('f', 62),('d', 1),('z', 0),('k', 5))) === List(Leaf('z', 0),Leaf('e',1), Leaf ('d', 1),Leaf('t',2), Leaf('x',3), Leaf('k', 5),Leaf('f', 62)))
+  }
+
 
   test("combine of some leaf list") {
     val leaflist = List(Leaf('e', 1), Leaf('t', 2), Leaf('x', 4))

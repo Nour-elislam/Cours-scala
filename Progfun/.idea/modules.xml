@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Progfun.iml" filepath="$PROJECT_DIR$/.idea/modules/Progfun.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Progfun-build.iml" filepath="$PROJECT_DIR$/.idea/modules/Progfun-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/progfun.iml" filepath="$PROJECT_DIR$/.idea/modules/progfun.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/progfun_4048.iml" filepath="$PROJECT_DIR$/.idea/modules/progfun_4048.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/progfun_4048-build.iml" filepath="$PROJECT_DIR$/.idea/modules/progfun_4048-build.iml" />
     </modules>
   </component>
 </project>

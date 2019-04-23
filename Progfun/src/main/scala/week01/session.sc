@@ -48,4 +48,4 @@ def prodCurr(a: Int,b: Int): Int =
   prodCurr
 }
 gcd(364,32)
-product(gcd(34,32)(3,2))
+gcd(3,4) :: gcd(4,3)

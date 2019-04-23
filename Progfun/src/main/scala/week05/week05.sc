@@ -32,6 +32,12 @@ def msort(xs: List[Int]):List[Int] = {
     merge(msort(fst), msort(snd))
   }
 }
-
+def merge2(xs: List[Int], ys: List[Int]): List[Int]= (xs,ys) match {
+  case (Nil,Nil) => Nil
+  case(xs,Nil) => xs
+  case(Nil,ys) => ys
+  case(x:: xs1,y::ys1) => if (x < y)  x :: merge(xs1, ys)
+  else y :: merge(xs, ys1)
+}
 print(msort(num))
 print(merge(num,num2))
